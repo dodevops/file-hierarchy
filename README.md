@@ -8,7 +8,7 @@ the `scan`-method.
 Every directory entry is processed and its statistics data is gathered and saved. You can traverse the tree using
 JS-Hierarchy's standard `walk` feature.
 
-Unlinke JS-Hierarchy, this module is not available for the browser (like, duh!).
+Unlike JS-Hierarchy, this module is not available for the browser (like, duh!).
 
 ## Installation
 
@@ -48,7 +48,7 @@ new fileHierarchy.FileNode().scan(new fileHierarchy.ScanOptions('/my/path'))
   )
 ```
 
-See the [API-docs](docs) for details.
+See the [API-docs](https://dodevops.github.io/file-hierarchy/) for details.
 
 ## Building
 
