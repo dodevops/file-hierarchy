@@ -66,7 +66,38 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="file-hierarchy-turn-an-entire-directory-tree-into-a-js-hierarchy-node">file-hierarchy - Turn an entire directory tree into a js-hierarchy node</h1>
 				<h2 id="introduction">Introduction</h2>
-				<p>Tell something about your typescript module.</p>
+				<p>File-Hierarchy provides a JS-Hierarchy Node implementation, that turns a directory tree into a JS-Hierarchy tree using
+				the <code>scan</code>-method.</p>
+				<p>Every directory entry is processed and its statistics data is gathered and saved. You can traverse the tree using
+				JS-Hierarchy&#39;s standard <code>walk</code> feature.</p>
+				<p>Unlike JS-Hierarchy, this module is not available for the browser (like, duh!).</p>
+				<h2 id="installation">Installation</h2>
+				<p>Install the module using</p>
+				<pre><code>npm <span class="hljs-keyword">install</span> <span class="hljs-keyword">file</span>-<span class="hljs-keyword">hierarchy</span> <span class="hljs-comment">--save</span>
+</code></pre><p>If you&#39;re using Typescript, you might want to add the following typings:</p>
+				<pre><code><span class="hljs-built_in">npm</span> install @types/bluebird @types/loglevel @types/node --save-dev
+</code></pre><h2 id="usage">Usage</h2>
+				<p>Typescript:</p>
+				<pre><code class="lang-typescript"><span class="hljs-keyword">import</span> { FileNode, ScanOptions } <span class="hljs-keyword">from</span> <span class="hljs-string">'../lib/FileNode'</span>
+
+<span class="hljs-keyword">new</span> FileNode().scan(<span class="hljs-keyword">new</span> ScanOptions(<span class="hljs-string">'/my/path'</span>))
+  .then(
+    <span class="hljs-function"><span class="hljs-params">fileNode</span> =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(fileNode.path)
+    }
+  )
+</code></pre>
+				<p>Javascript:</p>
+				<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> fileHierarchy = <span class="hljs-built_in">require</span>(<span class="hljs-string">'file-hierarchy'</span>)
+
+<span class="hljs-keyword">new</span> fileHierarchy.FileNode().scan(<span class="hljs-keyword">new</span> fileHierarchy.ScanOptions(<span class="hljs-string">'/my/path'</span>))
+  .then(
+    <span class="hljs-function"><span class="hljs-params">fileNode</span> =&gt;</span> {
+      <span class="hljs-built_in">console</span>.log(fileNode.path)
+    }
+  )
+</code></pre>
+				<p>See the <a href="https://dodevops.github.io/file-hierarchy/">API-docs</a> for details.</p>
 				<h2 id="building">Building</h2>
 				<p>To test and build this package, simply use grunt:</p>
 				<pre><code>grunt <span class="hljs-built_in">test</span>
