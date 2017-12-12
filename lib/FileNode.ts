@@ -21,7 +21,6 @@ import Bluebird = require('bluebird')
 export class FileNode extends AbstractNode {
 
   private _path: string
-  private _name: string
   private _type: FileNodeType
   private _stats: fs.Stats
 
@@ -44,7 +43,7 @@ export class FileNode extends AbstractNode {
     rootNode: boolean = true
   ): Bluebird<FileNode> {
     this._path = path.resolve(options.path)
-    this._name = path.basename(this._path)
+    this.name = path.basename(this._path)
     this._type = FileNodeType.Directory
     this._log.trace(`Scanning ${this._path}`)
     return Bluebird.fromCallback(
@@ -123,19 +122,6 @@ export class FileNode extends AbstractNode {
   set path (value: string
   ) {
     this._path = value
-  }
-
-  /**
-   * The directory or file name of this node. The file name includes the extension
-   * @return {string}
-   */
-  get name (): string {
-    return this._name
-  }
-
-  set name (value: string
-  ) {
-    this._name = value
   }
 
   /**
