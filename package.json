@@ -1,6 +1,6 @@
 {
   "name": "file-hierarchy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Turn an entire directory tree into a js-hierarchy node",
   "keywords": [
     "hierarchy",

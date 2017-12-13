@@ -67,7 +67,13 @@ export class FileNode extends AbstractNode {
                   return Bluebird.reduce<string, Array<FileNode>>(
                     entries.sort().filter(
                       entry => {
-                        return minimatch(entry, options.glob)
+                        return minimatch(
+                          entry,
+                          options.glob,
+                          {
+                            dot: true
+                          }
+                        )
                       }
                     ),
                     (total, entry) => {

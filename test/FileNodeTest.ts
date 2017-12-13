@@ -45,15 +45,18 @@ describe(
                   ).to.equal(7)
                   chai.expect(
                     node.getChildren()[2].getChildren().length
-                  ).to.equal(2)
+                  ).to.equal(3)
                   chai.expect(
                     node.getChildren()[2].getChildren()[0].name
-                  ).to.equal('test2.txt')
-                  chai.expect(
-                    node.getChildren()[2].getChildren()[0].stats.size
-                  ).to.equal(0)
+                  ).to.equal('.testdotfile.txt')
                   chai.expect(
                     node.getChildren()[2].getChildren()[1].name
+                  ).to.equal('test2.txt')
+                  chai.expect(
+                    node.getChildren()[2].getChildren()[1].stats.size
+                  ).to.equal(0)
+                  chai.expect(
+                    node.getChildren()[2].getChildren()[2].name
                   ).to.equal('testsub1.txt')
                 }
               )
