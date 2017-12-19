@@ -1,5 +1,7 @@
 # file-hierarchy - Turn an entire directory tree into a js-hierarchy node
 
+[![Build Status](https://travis-ci.org/dodevops/file-hierarchy.svg?branch=master)](https://travis-ci.org/dodevops/file-hierarchy) [![Coverage Status](https://coveralls.io/repos/github/dodevops/file-hierarchy/badge.svg?branch=master)](https://coveralls.io/github/dodevops/file-hierarchy?branch=master)  [![npm](https://img.shields.io/npm/v/file-hierarchy.svg)](https://www.npmjs.com/package/file-hierarchy)
+
 ## Introduction
 
 File-Hierarchy provides a JS-Hierarchy Node implementation, that turns a directory tree into a JS-Hierarchy tree using
