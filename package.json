@@ -1,6 +1,6 @@
 {
   "name": "file-hierarchy",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "Turn an entire directory tree into a js-hierarchy node",
   "keywords": [
     "hierarchy",
@@ -27,7 +27,7 @@
   "dependencies": {
     "bluebird": "^3.5.1",
     "loglevel": "^1.6.0",
-    "js-hierarchy": "^2.0.2",
+    "js-hierarchy": "^4.0.1",
     "minimatch": "^3.0.4"
   },
   "devDependencies": {
